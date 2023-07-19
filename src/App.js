@@ -6,6 +6,9 @@ function App() {
     <div className="App">
       <Nav />
       <Game />
+      <Game />
+      <Game />
+      <Game />
     </div>
   );
 }
