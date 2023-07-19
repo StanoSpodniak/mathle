@@ -1,5 +1,3 @@
-import "./Game.css";
-
 const Game = () => {
     const math = require('mathjs');
 
@@ -45,15 +43,17 @@ const Game = () => {
         return math.evaluate(`${firstRndNmb} ${mathSign} ${secondRndNmb} ${secondMathSign} ${thirdRndNmb}`);
     }
     let result = getResult(mathSign, firstRndNmb, secondRndNmb);
-    //push firstSign, secondSign, firstRndNmb, secondRndNmb, thirdRndNmb and result to localStorage with prompt - problemID
-    //rename this file
-    //the result of previous problems will be shown every session (8 hours)
 
-    return (
-        <div className="game-container">
-            <p className="math-problem">{firstRndNmb} {mathSign} {secondRndNmb} {secondMathSign} {thirdRndNmb} = {result}</p>
-        </div>
-    )
+    const Problem = {
+        mathSign: mathSign,
+        firstRndNmb: firstRndNmb,
+        secondRndNmb: secondRndNmb,
+        secondMathSign: secondMathSign,
+        thirdRndNmb: thirdRndNmb,
+        result: result
+    }
+
+    return Problem;
 }
 
 export default Game;

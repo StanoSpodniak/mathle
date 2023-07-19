@@ -1,0 +1,44 @@
+.main {
+    margin: 60px auto;
+}
+
+.playfield {
+    display: flex;
+    flex-direction: row;
+    font-size: 2em;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.tile {
+    height: 60px;
+    width: 60px;
+    border: 2px solid gainsboro;
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.inventory {
+    margin: 60px auto;
+    width: 40%;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 40px;
+    border: 2px solid gainsboro;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+.number-tile {
+    height: 60px;
+    width: 60px;
+    border: 2px solid gainsboro;
+    border-radius: 10px;
+    font-size: 1.5em;
+    background-color: white;
+}

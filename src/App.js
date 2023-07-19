@@ -1,14 +1,11 @@
 import Nav from "./Nav/Nav";
-import Game from "./Game/Game";
+import Main from "./Main/Main";
 
 function App() {
   return (
     <div className="App">
       <Nav />
-      <Game />
-      <Game />
-      <Game />
-      <Game />
+      <Main />
     </div>
   );
 }
