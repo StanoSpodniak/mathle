@@ -24,7 +24,7 @@
 
 .inventory {
     margin: 60px auto;
-    width: 40%;
+    width: 50%;
     padding: 20px;
     display: flex;
     flex-direction: row;
@@ -36,9 +36,9 @@
 
 .number-tile {
     height: 60px;
-    width: 60px;
+    min-width: 60px;
     border: 2px solid gainsboro;
     border-radius: 10px;
-    font-size: 1.5em;
+    font-size: 2em;
     background-color: white;
 }
