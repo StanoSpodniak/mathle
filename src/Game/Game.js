@@ -18,12 +18,12 @@ const Game = () => {
         let rndNmb = 1;
 
         if (mathSign === "*" || secondMathSign === "*") {
-            rndNmb = Math.ceil(Math.random() * 10); 
+            rndNmb = Math.ceil(Math.random() * 20); 
         } else if (mathSign === "+" || mathSign === "-") {
-            rndNmb = Math.ceil(Math.random() * 100);
+            rndNmb = Math.ceil(Math.random() * 20);
         } else {
             if (!firstRndNmb) {
-                rndNmb = Math.ceil(Math.random() * 10);
+                rndNmb = Math.ceil(Math.random() * 20);
             } else {
                 let rnd = Math.floor(Math.random() * firstRndNmb);
                 for (let i = 1; i <= rnd; i++) {
