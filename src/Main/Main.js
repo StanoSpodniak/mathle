@@ -12,11 +12,12 @@ const Main = () => {
     const buttonRefs = useRef([]);
     const tileRefs = useRef([]);
 
-    const [clickedNumbers, setClickedNumbers] = useState([]);
+    const [clickedNumbers, setClickedNumbers] = useState([""]);
     const [submitButtonText, setSubmitButtonText] = useState("Submit");
     const [announcement, setAnnouncement] = useState("");
 
     const [displaySumbitButton, setDisplaySubmitButton] = useState(false);
+    const [announcementColor, setAnnouncementColor] = useState("black");
 
     useEffect(() => {
         setFirstProblem(Game());
@@ -43,10 +44,11 @@ const Main = () => {
     }, [firstProblem, secondProblem]);
 
     useEffect(() => {
-        if(clickedNumbers.length === playNumbers.length) {
-            setDisplaySubmitButton(true);
-        } else {
+        if(clickedNumbers.includes("") || clickedNumbers.length !== playNumbers.length) {
             setDisplaySubmitButton(false);
+            setAnnouncement("");
+        } else {
+            setDisplaySubmitButton(true);
         }
     }, [clickedNumbers, playNumbers]);
 
@@ -80,11 +82,17 @@ const Main = () => {
         }
 
         if(canSubmit) {
-            if(math.evaluate(`${clickedNumbers[0]} ${firstProblem.mathSign} ${clickedNumbers[1]} ${firstProblem.secondMathSign} ${clickedNumbers[2]}`) === firstProblem.result) {
+            if((math.evaluate(`${clickedNumbers[0]} ${firstProblem.mathSign} ${clickedNumbers[1]} ${firstProblem.secondMathSign} ${clickedNumbers[2]}`) === firstProblem.result) &&
+            (math.evaluate(`${clickedNumbers[3]} ${secondProblem.mathSign} ${clickedNumbers[4]} ${secondProblem.secondMathSign} ${clickedNumbers[5]}`))) {
                 setSubmitButtonText("New Game");
+                setAnnouncementColor("green");
                 setAnnouncement("Correct");
             } else {
+                setAnnouncementColor("red");
                 setAnnouncement("Wrong");
+                setTimeout(() => {
+                    setAnnouncement("");
+                }, "2000");
             }
     
             if(submitButtonText === "New Game") {
@@ -98,51 +106,51 @@ const Main = () => {
     return (
         <div className="main">
             <div className="announcement">
-                <h2 >{announcement}</h2>
+                <h2 style={{ color: announcementColor }}>{announcement}</h2>
             </div>
             <div className="playfield">
                 <button 
-                    className="tile"
+                    className="item tile"
                     ref={ref => (tileRefs.current[0] = ref)} 
                     onClick={() => handleDelete(0)}>
                     {clickedNumbers[0]}
                 </button>
-                <p>{firstProblem.mathSign}</p>
-                <button className="tile"
+                <p className="item">{firstProblem.mathSign}</p>
+                <button className="item tile"
                     ref={ref => (tileRefs.current[1] = ref)} 
                     onClick={() => handleDelete(1)}>
                     {clickedNumbers[1]}
                 </button>
-                <p>{firstProblem.secondMathSign}</p>
-                <button className="tile"
+                <p className="item">{firstProblem.secondMathSign}</p>
+                <button className="item tile"
                     ref={ref => (tileRefs.current[2] = ref)} 
                     onClick={() => handleDelete(2)}>
                     {clickedNumbers[2]}
                 </button>
-                <p>=</p>
-                <p>{firstProblem.result}</p>
+                <p className="item">=</p>
+                <p className="item result">{firstProblem.result}</p>
             </div>
             <div className="playfield">
                 <button 
-                    className="tile"
+                    className="item tile"
                     ref={ref => (tileRefs.current[3] = ref)} 
                     onClick={() => handleDelete(3)}>
                     {clickedNumbers[3]}
                 </button>
-                <p>{secondProblem.mathSign}</p>
-                <button className="tile"
+                <p className="item">{secondProblem.mathSign}</p>
+                <button className="item tile"
                     ref={ref => (tileRefs.current[4] = ref)} 
                     onClick={() => handleDelete(4)}>
                     {clickedNumbers[4]}
                 </button>
-                <p>{secondProblem.secondMathSign}</p>
-                <button className="tile"
+                <p className="item">{secondProblem.secondMathSign}</p>
+                <button className="item tile"
                     ref={ref => (tileRefs.current[5] = ref)} 
                     onClick={() => handleDelete(5)}>
                     {clickedNumbers[5]}
                 </button>
-                <p>=</p>
-                <p>{secondProblem.result}</p>
+                <p className="item">=</p>
+                <p className="item result">{secondProblem.result}</p>
             </div>
             <div className="submit-field">
                 {displaySumbitButton && <button id="submit-button" onClick={handleSubmit}>{submitButtonText}</button>}
