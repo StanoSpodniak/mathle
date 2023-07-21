@@ -2,6 +2,7 @@ import {useState, useEffect, useRef } from "react";
 import Game from "../Game/Game";
 import "./Main.css";
 import Draggable from 'react-draggable';
+//mark with red incorect problem after submit
 //create cookies panel
 //create rules section
 //create about section
@@ -16,8 +17,8 @@ const Main = () => {
     const [firstProblem, setFirstProblem] = useState([]);
     const [secondProblem, setSecondProblem] = useState([]);
     const [playNumbers, setPlayNumbers] = useState([]);
-    const buttonRefs = useRef([]);
     const tileRefs = useRef([]);
+    const buttonRefs = useRef([]);
 
     const [clickedNumbers, setClickedNumbers] = useState([""]);
     const [submitButtonText, setSubmitButtonText] = useState("Submit");
@@ -97,14 +98,37 @@ const Main = () => {
         }
 
         if(canSubmit) {
+            if(math.evaluate(`${clickedNumbers[0]} ${firstProblem.mathSign} ${clickedNumbers[1]} ${firstProblem.secondMathSign} ${clickedNumbers[2]}`) !== firstProblem.result) {
+                for(let i = 0; i < 3; i++) {
+                    tileRefs.current[i].style.border = "2px solid #ff8080";
+                    tileRefs.current[i].style.color = "#e60000";
+                    setTimeout(() => {
+                        tileRefs.current[i].style.border = "2px solid gainsboro";
+                        tileRefs.current[i].style.color = "black";
+                    }, "2000");
+                }
+            }
+
+            if(math.evaluate(`${clickedNumbers[3]} ${secondProblem.mathSign} ${clickedNumbers[4]} ${secondProblem.secondMathSign} ${clickedNumbers[5]}`) !== secondProblem.result) {
+                for(let i = 3; i < 6; i++) {
+                    tileRefs.current[i].style.border = "2px solid #ff8080";
+                    tileRefs.current[i].style.color = "#e60000";
+                    setTimeout(() => {
+                        tileRefs.current[i].style.border = "2px solid gainsboro";
+                        tileRefs.current[i].style.color = "black";
+                    }, "2000");
+                }
+            }
+
+            //maybe change all buttons to green when correct
             if((math.evaluate(`${clickedNumbers[0]} ${firstProblem.mathSign} ${clickedNumbers[1]} ${firstProblem.secondMathSign} ${clickedNumbers[2]}`) === firstProblem.result) &&
             (math.evaluate(`${clickedNumbers[3]} ${secondProblem.mathSign} ${clickedNumbers[4]} ${secondProblem.secondMathSign} ${clickedNumbers[5]}`) === secondProblem.result)) {
                 setSubmitButtonText("New Game");
                 setAnnouncementColor("green");
                 setAnnouncement("Good Job!");
             } else {
-                setAnnouncementColor("red");
-                setAnnouncement("Try Again");
+                setAnnouncementColor("#e60000");
+                //setAnnouncement("Try Again");
                 setTimeout(() => {
                     setAnnouncement("");
                 }, "2000");
