@@ -2,6 +2,13 @@ import {useState, useEffect, useRef } from "react";
 import Game from "../Game/Game";
 import "./Main.css";
 import Draggable from 'react-draggable';
+//create cookies panel
+//create rules section
+//create about section
+//craete favicon
+//create hard option
+//create options panel and timer
+//enable drag numbers
 
 const Main = () => {
     const math = require('mathjs');
@@ -53,8 +60,8 @@ const Main = () => {
     }, [clickedNumbers, playNumbers]);
 
     const handleClick = (index) => {
-        //delete number from inventory when clicked or marked inventory tile as used
         const button = buttonRefs.current[index];
+        button.disabled = true;
 
         const currentPlayfield = [...clickedNumbers];
         for(let i = 0; i < 6; i++) {
@@ -68,6 +75,14 @@ const Main = () => {
 
     const handleDelete = (index) => {
         const currentPlayfield = [...clickedNumbers];
+        
+        for(let i = 0; i < playNumbers.length; i++) {
+            if(buttonRefs.current[i].innerText === currentPlayfield[index] && buttonRefs.current[i].disabled === true) {
+                buttonRefs.current[i].disabled = false;
+                break;
+            }
+        }
+
         currentPlayfield[index] = "";
         setClickedNumbers(currentPlayfield);
     }
@@ -83,13 +98,13 @@ const Main = () => {
 
         if(canSubmit) {
             if((math.evaluate(`${clickedNumbers[0]} ${firstProblem.mathSign} ${clickedNumbers[1]} ${firstProblem.secondMathSign} ${clickedNumbers[2]}`) === firstProblem.result) &&
-            (math.evaluate(`${clickedNumbers[3]} ${secondProblem.mathSign} ${clickedNumbers[4]} ${secondProblem.secondMathSign} ${clickedNumbers[5]}`))) {
+            (math.evaluate(`${clickedNumbers[3]} ${secondProblem.mathSign} ${clickedNumbers[4]} ${secondProblem.secondMathSign} ${clickedNumbers[5]}`) === secondProblem.result)) {
                 setSubmitButtonText("New Game");
                 setAnnouncementColor("green");
-                setAnnouncement("Correct");
+                setAnnouncement("Good Job!");
             } else {
                 setAnnouncementColor("red");
-                setAnnouncement("Wrong");
+                setAnnouncement("Try Again");
                 setTimeout(() => {
                     setAnnouncement("");
                 }, "2000");

@@ -8,6 +8,10 @@ const Game = () => {
             signs = ['+', '-', '*'];
         }
 
+        if(mathSign === "*" || mathSign === "/") {
+            signs = ['+', '-'];
+        }
+
         const randomIndex = Math.floor(Math.random() * signs.length);
         return signs[randomIndex];
     }
