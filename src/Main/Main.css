@@ -1,17 +1,6 @@
 .main {
-    margin: 0 auto;
+    margin: 100px auto;
     text-align: center;
-}
-
-.announcement {
-    height: 100px;
-}
-
-.announcement h2 {
-    padding: 40px 0;
-    font-size: 2.3em;
-    font-weight: 400;
-    letter-spacing: 2px;
 }
 
 .playfield {
@@ -65,13 +54,13 @@
 
 .inventory {
     margin: 0 auto;
-    width: 80%;
+    width: 30%;
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    gap: 40px;
+    gap: 30px;
     border-radius: 10px;
 }
 
@@ -84,6 +73,22 @@
     background-color: white;
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 1500px) {
+    .main {
+        margin: 60px auto;
+    }
+    
+    .inventory {
+        width: 50%;
+    }
+}
 
+@media only screen and (max-width: 1000px) {
+    .main {
+        margin: 30px auto;
+    }
+    
+    .inventory {
+        width: 80%;
+    }
 }
