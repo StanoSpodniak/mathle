@@ -2,15 +2,15 @@ import {useState, useEffect, useRef } from "react";
 import Game from "../Game/Game";
 import "./Main.css";
 import Draggable from 'react-draggable';
-//create cookies panel
-//change nameservers
+//improve style on mobile version
 //create rules section
 //create about section
+//change nameservers
 //craete favicon
 //save problem to params - if there are params load problem from them - give send to friend option
-//create options panel and timer
 //enable drag numbers
-
+//create options panel and timer
+//create default daily challenge - with backend
 
 const Main = () => {
     const math = require('mathjs');

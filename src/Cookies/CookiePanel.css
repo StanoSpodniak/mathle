@@ -1,0 +1,27 @@
+.cookie-panel {
+    width: 60%;
+    position: fixed;
+    bottom: 0;
+    left: 15%;
+    transition: transform 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 50px;
+    border: 2px solid gainsboro;
+    border-bottom: none;
+    border-radius: 10px 10px 0 0;
+    padding: 10px 40px;
+}
+
+.slide-out {
+    transform: translateY(100%);
+}
+
+.cookie-panel button {
+    height: 40px;
+    width: 150px;
+    border: none;
+    font-size: 1.2em;
+    background-color: gainsboro;
+}
