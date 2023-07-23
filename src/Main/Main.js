@@ -3,6 +3,7 @@ import Game from "../Game/Game";
 import "./Main.css";
 //import Draggable from 'react-draggable';
 
+//sometimes is not possible remove used numbers - after after new game something is not reseted
 //create rules section
 //create about section
 //craete favicon
@@ -37,6 +38,10 @@ const Main = () => {
     }, []);
 
     useEffect(() => {
+        console.log(firstProblem);
+        console.log(secondProblem);
+        console.log(thirdProblem);
+
         if (firstProblem && secondProblem && thirdProblem) {
             let numbers = [firstProblem.firstRndNmb];
             numbers = [...numbers, firstProblem.secondRndNmb];
@@ -82,6 +87,7 @@ const Main = () => {
 
     const handleDelete = (index) => {
         if(!gameIsOver) {
+            console.log("delete");
             const currentPlayfield = [...clickedNumbers];
         
             for(let i = 0; i < playNumbers.length; i++) {
@@ -150,6 +156,7 @@ const Main = () => {
     }
 
     const resetGame = () => {
+        setGameIsOver(false);
         setClickedNumbers([""]);
         setPlayNumbers([]);
         setSubmitButtonText("Sumbit");
