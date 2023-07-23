@@ -1,7 +1,7 @@
 import {useState, useEffect, useRef } from "react";
 import Game from "../Game/Game";
 import "./Main.css";
-import Draggable from 'react-draggable';
+//import Draggable from 'react-draggable';
 //change nameservers
 //create rules section
 //create about section
@@ -34,10 +34,6 @@ const Main = () => {
     }, []);
 
     useEffect(() => {
-        console.log(firstProblem);
-        console.log(secondProblem);
-        console.log(thirdProblem);
-
         if (firstProblem && secondProblem && thirdProblem) {
             let numbers = [firstProblem.firstRndNmb];
             numbers = [...numbers, firstProblem.secondRndNmb];
