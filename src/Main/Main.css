@@ -94,14 +94,42 @@
         margin: 10px auto;
     }
 
+    .playfield {
+        width: 80%;
+    }
+
+    .item {
+        width: 40px;
+    }
+
+    .tile {
+        height: 50px;
+        width: 50px;
+        font-size: 1.8rem;
+    }
+    
     .submit-field {
         height: 50px;
-        padding-top: 25px;
+        padding-top: 15px;
+    }
+
+    #submit-button {
+        width: 125px;
+        height: 40px;
+        font-size: 1.7em;
+        border-radius: 5px;
     }
     
     .inventory {
-        width: 80%;
-        padding: 50px 5px;
-        gap: 25px;
+        width: 90%;
+        padding: 25px 5px;
+        gap: 15px;
     }
+
+    .number-tile {
+        height: 50px;
+        min-width: 50px;
+        font-size: 1.8rem;
+    }
+    
 }

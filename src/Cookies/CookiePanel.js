@@ -20,7 +20,7 @@ const CookiePanel = () => {
 
       setTimeout(() => {
         saveCookieSettings(value);
-      }, 2000);
+      }, 1000);
     };
   
     const value = getCookieSettings() === "unchecked";

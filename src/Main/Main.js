@@ -2,7 +2,9 @@ import {useState, useEffect, useRef } from "react";
 import Game from "../Game/Game";
 import "./Main.css";
 //import Draggable from 'react-draggable';
-//change nameservers
+
+//improve mobile responsitivity
+//avoid reloading with new game
 //create rules section
 //create about section
 //craete favicon
@@ -10,6 +12,8 @@ import "./Main.css";
 //enable drag numbers
 //create options panel and timer
 //create default daily challenge - with backend
+
+//change nameservers
 
 const Main = () => {
     const math = require('mathjs');

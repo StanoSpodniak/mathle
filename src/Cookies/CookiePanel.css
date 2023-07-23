@@ -5,6 +5,7 @@
     left: 15%;
     transition: transform 0.5s ease;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     column-gap: 50px;
@@ -15,10 +16,6 @@
 
 .slide-out {
     transform: translateY(100%);
-}
-
-.cookie-panel p { 
-
 }
 
 .cookie-panel button {
@@ -33,15 +30,19 @@
     .cookie-panel {
         width: 100%;
         left: 0;
-        column-gap: 15px;
-        padding: 5px;
+        justify-content: center;
+        column-gap: 20px;
+        padding: 5px 0;
+        border: none;
+        border-top: 2px solid gainsboro;
     }
     
-    .cookie-panel p { 
-        width: 65%;
+    .cookie-panel p {
+        width: 60%;
+        font-size: 0.8em;
     }
 
     .cookie-panel button {
-        width: 100px;
+        width: 90px;
     }
 }
