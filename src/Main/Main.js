@@ -3,8 +3,6 @@ import Game from "../Game/Game";
 import "./Main.css";
 //import Draggable from 'react-draggable';
 
-//improve mobile responsitivity
-//avoid reloading with new game
 //create rules section
 //create about section
 //craete favicon
@@ -13,7 +11,7 @@ import "./Main.css";
 //create options panel and timer
 //create default daily challenge - with backend
 
-//change nameservers
+//websupport A IP 37.9.175.155
 
 const Main = () => {
     const math = require('mathjs');
@@ -28,7 +26,7 @@ const Main = () => {
     const buttonRefs = useRef([]);
 
     const [submitButtonText, setSubmitButtonText] = useState("Submit");
-    const [displaySumbitButton, setDisplaySubmitButton] = useState(false);
+    const [displaySubmitButton, setDisplaySubmitButton] = useState(false);
     const [gameIsOver, setGameIsOver] = useState(false);
 
     useEffect(() => {
@@ -131,7 +129,10 @@ const Main = () => {
             }
     
             if(submitButtonText === "Play Again") {
-                window.location.reload();
+                resetGame();
+                setFirstProblem(Game());
+                setSecondProblem(Game());
+                setThirdProblem(Game());
             }
         }
     }
@@ -144,6 +145,18 @@ const Main = () => {
                 tileRefs.current[i].style.border = "2px solid gainsboro";
                 tileRefs.current[i].style.color = "black";
             }, "2000");
+        }
+    }
+
+    const resetGame = () => {
+        setClickedNumbers([""]);
+        setPlayNumbers([]);
+        setSubmitButtonText("Sumbit");
+        setDisplaySubmitButton(false);
+
+        for(let i = 0; i < 9; i++) {
+            tileRefs.current[i].style.border = "2px solid gainsboro";
+            tileRefs.current[i].style.color = "black";
         }
     }
 
@@ -216,7 +229,7 @@ const Main = () => {
                 <p className="item result">{thirdProblem.result}</p>
             </div>
             <div className="submit-field">
-                {displaySumbitButton && <button id="submit-button" onClick={handleSubmit}>{submitButtonText}</button>}
+                {displaySubmitButton && <button id="submit-button" onClick={handleSubmit}>{submitButtonText}</button>}
             </div>
             <div className="inventory">
                 {playNumbers.map((number, i) => (
