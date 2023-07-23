@@ -38,10 +38,6 @@ const Main = () => {
     }, []);
 
     useEffect(() => {
-        console.log(firstProblem);
-        console.log(secondProblem);
-        console.log(thirdProblem);
-
         if (firstProblem && secondProblem && thirdProblem) {
             let numbers = [firstProblem.firstRndNmb];
             numbers = [...numbers, firstProblem.secondRndNmb];
@@ -87,7 +83,6 @@ const Main = () => {
 
     const handleDelete = (index) => {
         if(!gameIsOver) {
-            console.log("delete");
             const currentPlayfield = [...clickedNumbers];
         
             for(let i = 0; i < playNumbers.length; i++) {
