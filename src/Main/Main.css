@@ -61,7 +61,6 @@
     flex-direction: row;
     justify-content: center;
     gap: 30px;
-    border-radius: 10px;
 }
 
 .number-tile {
@@ -75,20 +74,34 @@
 
 @media only screen and (max-width: 1500px) {
     .main {
-        margin: 60px auto;
+        margin: 30px auto;
+    }
+
+    .submit-field {
+        height: 50px;
+        padding-top: 30px;
     }
     
     .inventory {
-        width: 50%;
+        width: 80%;
+        padding: 50px 5px;
+        gap: 25px;
     }
 }
 
 @media only screen and (max-width: 1000px) {
     .main {
-        margin: 30px auto;
+        margin: 10px auto;
+    }
+
+    .submit-field {
+        height: 50px;
+        padding-top: 25px;
     }
     
     .inventory {
         width: 80%;
+        padding: 50px 5px;
+        gap: 25px;
     }
 }

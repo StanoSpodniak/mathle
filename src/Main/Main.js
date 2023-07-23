@@ -2,10 +2,9 @@ import {useState, useEffect, useRef } from "react";
 import Game from "../Game/Game";
 import "./Main.css";
 import Draggable from 'react-draggable';
-//improve style on mobile version
+//change nameservers
 //create rules section
 //create about section
-//change nameservers
 //craete favicon
 //save problem to params - if there are params load problem from them - give send to friend option
 //enable drag numbers

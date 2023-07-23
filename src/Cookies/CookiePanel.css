@@ -10,12 +10,15 @@
     column-gap: 50px;
     border: 2px solid gainsboro;
     border-bottom: none;
-    border-radius: 10px 10px 0 0;
     padding: 10px 40px;
 }
 
 .slide-out {
     transform: translateY(100%);
+}
+
+.cookie-panel p { 
+
 }
 
 .cookie-panel button {
@@ -24,4 +27,21 @@
     border: none;
     font-size: 1.2em;
     background-color: gainsboro;
+}
+
+@media only screen and (max-width: 1000px) { 
+    .cookie-panel {
+        width: 100%;
+        left: 0;
+        column-gap: 15px;
+        padding: 5px;
+    }
+    
+    .cookie-panel p { 
+        width: 65%;
+    }
+
+    .cookie-panel button {
+        width: 100px;
+    }
 }
