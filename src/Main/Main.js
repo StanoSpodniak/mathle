@@ -10,6 +10,7 @@ import "./Main.css";
 //enable drag numbers
 //create options panel and timer
 //create default daily challenge - with backend
+//on mobile give ad at the bottom of the screen - condition if ok is pressed or if there is a cookie "agr"
 
 //websupport A IP 37.9.175.155
 

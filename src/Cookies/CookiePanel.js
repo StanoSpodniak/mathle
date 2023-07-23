@@ -7,7 +7,7 @@ const CookiePanel = () => {
     const [isVisible, setIsVisible] = useState(true);
 
     const saveCookieSettings = (value) => {
-      setCookie("agr", value, { path: '/' });
+      setCookie("agr", value, { path: '/', maxAge: 31536000 });
     };
   
     const getCookieSettings = () => {

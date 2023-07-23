@@ -1,9 +1,18 @@
 .nav-bar {
-    text-align: center;
+    display: flex;
+    align-items: center;
     border-bottom: 1px solid gainsboro;
 }
 
 .title {
     padding: 10px;
     letter-spacing: 2px;
+    margin-left: auto;
+}
+
+#question-icon {
+    width: 35px;
+    height: 35px;
+    margin-left: auto;
+    padding-right: 40px;
 }
