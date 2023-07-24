@@ -1,15 +1,40 @@
+import { useState, useEffect } from "react";
 import './Nav.css';
 
 const Nav = () => {
+    const [displayRules, setDisplayRules] = useState(false);
+
+    useEffect(() => {
+        document.addEventListener('click', handleClickOutsidePanel);
+    
+        return () => {
+          document.removeEventListener('click', handleClickOutsidePanel);
+        };
+      }, []);
 
     const handleClick = () => {
+        setDisplayRules((displayRules) => !displayRules);
+    }
 
+    const handleClickOutsidePanel = (event) => {
+        const rulesButton = document.getElementById("question-icon");
+        const rules = document.getElementById("rules-panel");
+        if (event.target !== rulesButton) {
+            if (rules && !rules.contains(event.target)) {
+                setDisplayRules(false);
+            }
+        }
     }
 
     return (
+        <div>
         <div className="nav-bar">
             <h1 className="title">Numzzle</h1>
-            <img id="question-icon" src="icons/question.png" alt="question mark" />
+            <img id="question-icon" src="icons/question.png" alt="question mark" onClick={handleClick} />
+        </div>
+            {displayRules && <div id="rules-panel">
+                <h2>How To Play?</h2>
+            </div>}
         </div>
     )
 }

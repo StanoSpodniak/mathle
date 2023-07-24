@@ -2,10 +2,11 @@
     display: flex;
     align-items: center;
     border-bottom: 1px solid gainsboro;
+    padding: 10px;
 }
 
 .title {
-    padding: 10px;
+    padding-left: 80px;
     letter-spacing: 2px;
     margin-left: auto;
 }
@@ -15,4 +16,36 @@
     height: 30px;
     margin-left: auto;
     padding-right: 40px;
+}
+
+#rules-panel {
+    height: 75%;
+    width: 30%;
+    position: absolute;
+    top: 10%;
+    left: 35%;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 50px 20px;
+}
+
+@media only screen and (max-width: 1000px) {
+    #rules-panel {
+        height: 75%;
+        width: 80%;
+        position: absolute;
+        top: 9%;
+        left: 5%;
+        padding: 20px 20px;
+    }
+    
+    .title {
+        padding-left: 20px;
+    }
+    
+    #question-icon {
+        padding-right: 10px;
+    }
+    
 }
