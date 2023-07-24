@@ -38,10 +38,6 @@ const Main = () => {
     }, []);
 
     useEffect(() => {
-        console.log(firstProblem);
-        console.log(secondProblem);
-        console.log(thirdProblem);
-
         if (firstProblem && secondProblem && thirdProblem) {
             let numbers = [firstProblem.firstRndNmb];
             numbers = [...numbers, firstProblem.secondRndNmb];
