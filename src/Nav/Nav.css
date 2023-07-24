@@ -2,17 +2,19 @@
     display: flex;
     align-items: center;
     border-bottom: 1px solid gainsboro;
+    justify-content: center; /* remove later */
 }
 
 .title {
     padding: 10px;
     letter-spacing: 2px;
-    margin-left: auto;
+    /*margin-left: auto;*/
 }
 
 #question-icon {
+    display: none; /* remove later */
     width: 30px;
     height: 30px;
-    margin-left: auto;
+    /*margin-left: auto;*/
     padding-right: 40px;
 }
