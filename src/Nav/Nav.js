@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import './Nav.css';
 
+//To suitable place, maybe footer, add credits section
+
 const Nav = () => {
     const [displayRules, setDisplayRules] = useState(false);
 
