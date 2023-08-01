@@ -3,10 +3,12 @@ import Game from "../Game/Game";
 import "./Main.css";
 //import Draggable from 'react-draggable';
 
+//improve responsivity on mobile resolution
 //add closing icon to rules panel
 //rules should be displayed by default to a new player - not new player will be identified with cookie
 //improve responsitivity for notebooks
 
+//update readme file
 //To suitable place, maybe footer, add credits section - https://wordleplay.com/sk/ - maybe do it like here
 //create about section
 //create night mode

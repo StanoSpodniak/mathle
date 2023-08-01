@@ -20,24 +20,34 @@
 
 #rules-panel {
     position: absolute;
-    width: 450px;
-    height: 650px;
-    top: 50%;
+    width: 520px;
+    height: 600px;
+    top: 48%;
     left: 50%;
-    margin-top: -325px;
-    margin-left: -225px;
+    margin-top: -300px;
+    margin-left: -260px;
     border-radius: 5px;
     background-color: white;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 #rules-text {
-    padding: 30px;
+    padding: 30px 5px 30px 30px;
+}
+
+#rules-text h2 {
+    font-size: 1.9em;
+}
+
+#rules-text h3 {
+    padding-top: 20px;
+    font-weight: 400;
+    font-size: 1.5em;
 }
 
 #rules li {
-    margin: 25px;
-    font-size: 1.4em;
+    margin: 20px;
+    font-size: 1.3em;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -50,18 +60,28 @@
     }
     
     #rules-panel {
-        width: 350px;
+        width: 360px;
         height: 550px;
-        margin-left: -175px;
+        top: 54%;
+        margin-left: -180px;
         margin-top: -275px;
     }
 
     #rules-text {
         padding: 15px;
     }
+
+    #rules-text h2 {
+        font-size: 1.5em;
+    }
+    
+    #rules-text h3 {
+        padding-top: 10px;
+        font-size: 1.2em;
+    }
     
     #rules li {
         margin: 20px 0 20px 20px;
-        font-size: 1.2em;
+        font-size: 1.1em;
     }
 }
