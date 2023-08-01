@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
 import './Nav.css';
 
-//To suitable place, maybe footer, add credits section
-
 const Nav = () => {
     const [displayRules, setDisplayRules] = useState(false);
 
@@ -30,13 +28,25 @@ const Nav = () => {
 
     return (
         <div>
-        <div className="nav-bar">
-            <h1 className="title">Numzzle</h1>
-            <img id="question-icon" src="icons/question.png" alt="question mark" onClick={handleClick} />
-        </div>
-            {displayRules && <div id="rules-panel">
-                <h2>How To Play?</h2>
-            </div>}
+            <div className="nav-bar">
+                <h1 className="title">Numzzle</h1>
+                <img id="question-icon" src="icons/question.png" alt="question mark" onClick={handleClick} />
+            </div>
+            {displayRules && 
+                <div id="rules-panel">
+                    <div id="rules-text">
+                        <h2>How To Play?</h2>
+                        <div id="rules">
+                            <ol>
+                                <li>Click on the numbers to complete the mathematical equation correctly.</li>
+                                <li>You can remove a number from the equation by clicking it.</li>
+                                <li>Each number can only be used once.</li>
+                                <li>After all three equations have been completed. Submit your solution. If it is correct, the numbers will turn <span style={{ color: "#189a18" }}>green</span> and you can start solving the next problem. If not the numbers of the incorrect equations will be <span style={{ color: "#e60000" }}>red</span>.</li>
+                                <li>The game does not contain set attempts to solve. You can play <span style={{ fontWeight: "600" }}>without limits</span> and solve as many math problems as you want.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>}
         </div>
     )
 }

@@ -19,27 +19,28 @@
 }
 
 #rules-panel {
-    height: 50%;
-    width: 20%;
     position: absolute;
-    top: 10%;
-    left: 39%;
+    width: 450px;
+    height: 650px;
+    top: 50%;
+    left: 50%;
+    margin-top: -325px;
+    margin-left: -225px;
     border-radius: 5px;
     background-color: white;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    padding: 50px 20px;
+}
+
+#rules-text {
+    padding: 30px;
+}
+
+#rules li {
+    margin: 25px;
+    font-size: 1.4em;
 }
 
 @media only screen and (max-width: 1000px) {
-    #rules-panel {
-        height: 75%;
-        width: 80%;
-        position: absolute;
-        top: 9%;
-        left: 5%;
-        padding: 20px 20px;
-    }
-    
     .title {
         padding-left: 20px;
     }
@@ -48,4 +49,19 @@
         padding-right: 10px;
     }
     
+    #rules-panel {
+        width: 350px;
+        height: 550px;
+        margin-left: -175px;
+        margin-top: -275px;
+    }
+
+    #rules-text {
+        padding: 15px;
+    }
+    
+    #rules li {
+        margin: 20px 0 20px 20px;
+        font-size: 1.2em;
+    }
 }
