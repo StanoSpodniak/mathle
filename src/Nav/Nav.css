@@ -19,11 +19,11 @@
 }
 
 #rules-panel {
-    height: 75%;
-    width: 30%;
+    height: 50%;
+    width: 20%;
     position: absolute;
     top: 10%;
-    left: 35%;
+    left: 39%;
     border-radius: 5px;
     background-color: white;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
