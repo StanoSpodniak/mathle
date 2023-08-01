@@ -3,10 +3,14 @@ import Game from "../Game/Game";
 import "./Main.css";
 //import Draggable from 'react-draggable';
 
-//sometimes is not possible remove used numbers - after after new game something is not reseted
-//create rules section
+//add closing icon to rules panel
+//rules should be displayed by default to a new player - not new player will be identified with cookie
+//improve responsitivity for notebooks
+
+//To suitable place, maybe footer, add credits section - https://wordleplay.com/sk/ - maybe do it like here
 //create about section
-//craete favicon
+//create night mode
+
 //save problem to params - if there are params load problem from them - give send to friend option
 //enable drag numbers
 //create options panel and timer
@@ -38,6 +42,10 @@ const Main = () => {
     }, []);
 
     useEffect(() => {
+        //console.log(firstProblem);
+        //console.log(secondProblem);
+        //console.log(thirdProblem);
+
         if (firstProblem && secondProblem && thirdProblem) {
             let numbers = [firstProblem.firstRndNmb];
             numbers = [...numbers, firstProblem.secondRndNmb];

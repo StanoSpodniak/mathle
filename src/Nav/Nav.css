@@ -2,19 +2,66 @@
     display: flex;
     align-items: center;
     border-bottom: 1px solid gainsboro;
-    justify-content: center; /* remove later */
+    padding: 10px;
 }
 
 .title {
-    padding: 10px;
+    padding-left: 80px;
     letter-spacing: 2px;
-    /*margin-left: auto;*/
+    margin-left: auto;
 }
 
 #question-icon {
-    display: none; /* remove later */
     width: 30px;
     height: 30px;
-    /*margin-left: auto;*/
+    margin-left: auto;
     padding-right: 40px;
+}
+
+#rules-panel {
+    position: absolute;
+    width: 450px;
+    height: 650px;
+    top: 50%;
+    left: 50%;
+    margin-top: -325px;
+    margin-left: -225px;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+#rules-text {
+    padding: 30px;
+}
+
+#rules li {
+    margin: 25px;
+    font-size: 1.4em;
+}
+
+@media only screen and (max-width: 1000px) {
+    .title {
+        padding-left: 20px;
+    }
+    
+    #question-icon {
+        padding-right: 10px;
+    }
+    
+    #rules-panel {
+        width: 350px;
+        height: 550px;
+        margin-left: -175px;
+        margin-top: -275px;
+    }
+
+    #rules-text {
+        padding: 15px;
+    }
+    
+    #rules li {
+        margin: 20px 0 20px 20px;
+        font-size: 1.2em;
+    }
 }

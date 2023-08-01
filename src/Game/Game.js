@@ -26,7 +26,7 @@ const Game = () => {
         } else if (mathSign === "+" || mathSign === "-") {
             rndNmb = Math.ceil(Math.random() * 15);
         } else {
-            if (!firstRndNmb) {
+            if (!firstRndNmb || secondMathSign !== undefined) {
                 rndNmb = Math.ceil(Math.random() * 15);
             } else {
                 let rnd = Math.floor(Math.random() * firstRndNmb);
