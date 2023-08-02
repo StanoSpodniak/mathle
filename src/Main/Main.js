@@ -3,13 +3,11 @@ import Game from "../Game/Game";
 import "./Main.css";
 //import Draggable from 'react-draggable';
 
-//rules should be displayed by default to a new player - not new player will be identified with cookie
-
-//make "give up" function
+//make "give up" function (make it in options panel - dark mode, sounds)
 //update readme file
 //make drag numbers functionality
 
-//To suitable place, maybe footer, add credits section - https://wordleplay.com/sk/ - maybe do it like here
+//To suitable place, maybe footer, add, about, how to play and credits section - https://wordleplay.com/sk/ - maybe do it like here
 //create about section
 //create privacy policy section - link it to cookie panel
 
@@ -168,7 +166,7 @@ const Main = () => {
         setGameIsOver(false);
         setClickedNumbers([""]);
         setPlayNumbers([]);
-        setSubmitButtonText("Sumbit");
+        setSubmitButtonText("Submit");
         setDisableSubmitButton(true);
 
         for(let i = 0; i < 9; i++) {

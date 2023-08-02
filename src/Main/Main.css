@@ -50,11 +50,13 @@
 }
 
 #submit-button:hover {
-    background-color: whitesmoke;
+    cursor: pointer;
 }
 
 #submit-button:disabled {
+    cursor: default;
     background-color: white;
+    border: 2px solid gainsboro;
 }
 
 .inventory {
