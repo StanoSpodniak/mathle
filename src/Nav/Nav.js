@@ -35,6 +35,7 @@ const Nav = () => {
             {displayRules && 
                 <div id="rules-panel">
                     <div id="rules-text">
+                        <img id="close-icon" src="icons/close.png" alt="close" onClick={handleClick} />
                         <h2>How To Play?</h2>
                         <h3>Solve three mathematical equations.</h3>
                         <div id="rules">
@@ -55,5 +56,6 @@ const Nav = () => {
 //Copy this link and paste it wherever it’s visible, close to where you’re using the image. If that’s not possible, place it at the footer of your website, blog or newsletter, or in the credits section.
 //<a href="https://www.flaticon.com/free-icons/question" title="question icons">Question icons created by Freepik - Flaticon</a>
 //<a href="https://www.flaticon.com/free-icons/plus" title="plus icons">Plus icons created by Freepik - Flaticon</a>
+//<a href="https://www.flaticon.com/free-icons/close" title="close icons">Close icons created by Pixel perfect - Flaticon</a>
 
 export default Nav;

@@ -3,21 +3,22 @@ import Game from "../Game/Game";
 import "./Main.css";
 //import Draggable from 'react-draggable';
 
-//improve responsivity on mobile resolution
-//add closing icon to rules panel
+//improve responsitivity on notebooks
 //rules should be displayed by default to a new player - not new player will be identified with cookie
-//improve responsitivity for notebooks
 
 //update readme file
 //To suitable place, maybe footer, add credits section - https://wordleplay.com/sk/ - maybe do it like here
 //create about section
-//create night mode
+//create a night mode
+//create privacy policy section - link it to cookie panel
 
 //save problem to params - if there are params load problem from them - give send to friend option
 //enable drag numbers
 //create options panel and timer
-//create default daily challenge - with backend
+//maybe create default daily challenge - with backend
 //on mobile give ad at the bottom of the screen - condition if ok is pressed or if there is a cookie "agr"
+
+//create registration option and rating based on average time spend on solving equations - make a practice and rating options
 
 //websupport A IP 37.9.175.155
 
