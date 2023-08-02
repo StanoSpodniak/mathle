@@ -5,7 +5,7 @@ import ReactGA from "react-ga4";
 
 function App() {
 
-  //ReactGA.initialize(process.env.REACT_APP_GOOGLE_ANALYTICS_KEY);
+  ReactGA.initialize(process.env.REACT_APP_GOOGLE_ANALYTICS_KEY);
 
   return (
     <div className="App">
