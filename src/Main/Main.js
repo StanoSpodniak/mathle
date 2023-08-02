@@ -10,6 +10,7 @@ import "./Main.css";
 //To suitable place, maybe footer, add, about, how to play and credits section - https://wordleplay.com/sk/ - maybe do it like here
 //create about section
 //create privacy policy section - link it to cookie panel
+//add animation when numbers came to file; like here - https://wordleplay.com/sk/
 
 //create a night mode
 //save problem to params - if there are params load problem from them - give send to friend option
