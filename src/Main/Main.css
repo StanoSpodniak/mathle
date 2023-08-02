@@ -53,6 +53,10 @@
     background-color: whitesmoke;
 }
 
+#submit-button:disabled {
+    background-color: white;
+}
+
 .inventory {
     margin: 0 auto;
     width: 70%;
@@ -79,12 +83,10 @@
 
     .submit-field {
         height: 50px;
-        padding-top: 30px;
     }
     
     .inventory {
         width: 80%;
-        padding: 50px 5px;
         gap: 25px;
     }
 }
@@ -109,8 +111,7 @@
     }
     
     .submit-field {
-        height: 50px;
-        padding-top: 15px;
+        height: 40px;
     }
 
     #submit-button {
@@ -126,7 +127,6 @@
     
     .inventory {
         width: 90%;
-        padding: 25px 5px;
         gap: 15px;
     }
 
