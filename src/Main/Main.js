@@ -3,22 +3,23 @@ import Game from "../Game/Game";
 import "./Main.css";
 //import Draggable from 'react-draggable';
 
-//improve responsitivity on notebooks
 //rules should be displayed by default to a new player - not new player will be identified with cookie
 
 //update readme file
+//make drag numbers functionality
+
 //To suitable place, maybe footer, add credits section - https://wordleplay.com/sk/ - maybe do it like here
 //create about section
-//create a night mode
 //create privacy policy section - link it to cookie panel
 
 //save problem to params - if there are params load problem from them - give send to friend option
-//enable drag numbers
+//create a night mode
+//create registration option and rating based on average time spend on solving equations - make a practice and rating options
+
 //create options panel and timer
 //maybe create default daily challenge - with backend
 //on mobile give ad at the bottom of the screen - condition if ok is pressed or if there is a cookie "agr"
 
-//create registration option and rating based on average time spend on solving equations - make a practice and rating options
 
 //websupport A IP 37.9.175.155
 
@@ -35,7 +36,7 @@ const Main = () => {
     const buttonRefs = useRef([]);
 
     const [submitButtonText, setSubmitButtonText] = useState("Submit");
-    const [displaySubmitButton, setDisplaySubmitButton] = useState(false);
+    const [disableSubmitButton, setDisableSubmitButton] = useState(true);
     const [gameIsOver, setGameIsOver] = useState(false);
 
     useEffect(() => {
@@ -72,9 +73,9 @@ const Main = () => {
 
     useEffect(() => {
         if(clickedNumbers.includes("") || clickedNumbers.length !== playNumbers.length) {
-            setDisplaySubmitButton(false);
+            setDisableSubmitButton(true);
         } else {
-            setDisplaySubmitButton(true);
+            setDisableSubmitButton(false);
         }
     }, [clickedNumbers, playNumbers]);
 
@@ -122,7 +123,7 @@ const Main = () => {
             (math.evaluate(`${clickedNumbers[3]} ${secondProblem.mathSign} ${clickedNumbers[4]} ${secondProblem.secondMathSign} ${clickedNumbers[5]}`) === secondProblem.result) &&  
             (math.evaluate(`${clickedNumbers[6]} ${thirdProblem.mathSign} ${clickedNumbers[7]} ${thirdProblem.secondMathSign} ${clickedNumbers[8]}`) === thirdProblem.result)) {
                 setGameIsOver(true);
-                setSubmitButtonText("Play Again");
+                setSubmitButtonText("New Game");
                 for(let i = 0; i < 9; i++) {
                     tileRefs.current[i].style.border = "2px solid #bdf5bd";
                     tileRefs.current[i].style.color = "#189a18";
@@ -141,7 +142,7 @@ const Main = () => {
                 }
             }
     
-            if(submitButtonText === "Play Again") {
+            if(submitButtonText === "New Game") {
                 resetGame();
                 setFirstProblem(Game());
                 setSecondProblem(Game());
@@ -166,7 +167,7 @@ const Main = () => {
         setClickedNumbers([""]);
         setPlayNumbers([]);
         setSubmitButtonText("Sumbit");
-        setDisplaySubmitButton(false);
+        setDisableSubmitButton(true);
 
         for(let i = 0; i < 9; i++) {
             tileRefs.current[i].style.border = "2px solid gainsboro";
@@ -243,7 +244,7 @@ const Main = () => {
                 <p className="item result">{thirdProblem.result}</p>
             </div>
             <div className="submit-field">
-                {displaySubmitButton && <button id="submit-button" onClick={handleSubmit}>{submitButtonText}</button>}
+                <button id="submit-button" onClick={handleSubmit} disabled={disableSubmitButton}>{submitButtonText}</button>
             </div>
             <div className="inventory">
                 {playNumbers.map((number, i) => (
