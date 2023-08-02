@@ -27,7 +27,7 @@ const Nav = () => {
     }
 
     return (
-        <div>
+        <div className="nav-container">
             <div className="nav-bar">
                 <h1 className="title">Numzzle</h1>
                 <img id="question-icon" src="icons/question.png" alt="question mark" onClick={handleClick} />
@@ -40,11 +40,11 @@ const Nav = () => {
                         <h3>Solve three mathematical equations.</h3>
                         <div id="rules">
                             <ol>
-                                <li><span style={{ fontWeight: "600" }}>Click</span> on the numbers to complete the mathematical equation.</li>
+                                <li><span style={{ fontWeight: "600" }}>Click</span> on the numbers to complete the equation.</li>
                                 <li>You can remove a number from the equation by clicking it.</li>
                                 <li>Each number can only be used once.</li>
-                                <li>After all equations have been completed. Submit your solution. If it is correct, the numbers will turn <span style={{ color: "#189a18" }}>green</span> and you can start solving the next problem. If not the numbers of the incorrect equations will be <span style={{ color: "#e60000" }}>red</span>.</li>
-                                <li>The game does not contain set attempts to solve. You can play <span style={{ fontWeight: "600" }}>without limits</span> and solve as many math problems as you want.</li>
+                                <li>After all equations have been completed. Submit your solution. If it is correct, the numbers will turn <span style={{ color: "#189a18" }}>green</span> and you can tackle a new problem. If not the numbers of the incorrect equations will be <span style={{ color: "#e60000" }}>red</span>.</li>
+                                <li>There are no set attempts to solve. You can play <span style={{ fontWeight: "600" }}>without limits</span> and solve as many math problems as you want.</li>
                             </ol>
                         </div>
                     </div>

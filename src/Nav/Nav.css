@@ -6,7 +6,7 @@
 }
 
 .title {
-    padding-left: 80px;
+    padding-left: 90px;
     letter-spacing: 2px;
     margin-left: auto;
 }
@@ -15,17 +15,17 @@
     width: 30px;
     height: 30px;
     margin-left: auto;
-    padding-right: 40px;
+    margin-right: 40px;
+    cursor: pointer;
 }
 
 #rules-panel {
     position: absolute;
-    width: 520px;
-    height: 600px;
-    top: 48%;
+    width: 450px;
+    height: 575px;
+    top: 33%;
     left: 50%;
-    margin-top: -300px;
-    margin-left: -260px;
+    transform: translate(-50%, -33%);
     border-radius: 5px;
     background-color: white;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -37,7 +37,8 @@
 
 #close-icon {
     width: 25px;
-    margin: 0 455px;
+    margin: 0 387px;
+    cursor: pointer;
 }
 
 #rules-text h2 {
@@ -57,19 +58,19 @@
 
 @media only screen and (max-width: 1000px) {
     .title {
-        padding-left: 20px;
+        padding-left: 60px;
     }
     
     #question-icon {
-        padding-right: 10px;
+        margin-right: 10px;
     }
     
     #rules-panel {
         width: 360px;
-        height: 530px;
-        top: 54%;
-        margin-left: -180px;
-        margin-top: -265px;
+        height: 500px;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        overflow: hidden;
     }
 
     #rules-text {

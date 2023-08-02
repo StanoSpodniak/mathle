@@ -5,6 +5,7 @@ import "./Main.css";
 
 //rules should be displayed by default to a new player - not new player will be identified with cookie
 
+//make "give up" function
 //update readme file
 //make drag numbers functionality
 
