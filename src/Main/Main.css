@@ -1,5 +1,5 @@
 .main {
-    margin: 100px auto;
+    margin: 75px auto;
     text-align: center;
 }
 
@@ -35,8 +35,9 @@
 }
 
 .submit-field {
-    height: 100px;
-    padding-top: 40px;
+    height: 50px;
+    margin: 40px auto;
+    align-items: center;
 }
 
 #submit-button {
@@ -55,7 +56,6 @@
 .inventory {
     margin: 0 auto;
     width: 70%;
-    padding: 20px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -134,6 +134,5 @@
         height: 50px;
         min-width: 50px;
         font-size: 1.8rem;
-    }
-    
+    }  
 }
