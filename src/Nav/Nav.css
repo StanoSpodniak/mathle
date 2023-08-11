@@ -6,7 +6,7 @@
 }
 
 .title {
-    padding-left: 90px;
+    padding-left: 160px;
     letter-spacing: 2px;
     margin-left: auto;
 }
@@ -19,7 +19,7 @@
     cursor: pointer;
 }
 
-#rules-panel {
+#panel {
     position: absolute;
     width: 450px;
     height: 575px;
@@ -56,16 +56,23 @@
     font-size: 1.3em;
 }
 
+#settings-icon {
+    width: 30px;
+    margin-right: 40px;
+    cursor: pointer;
+}
+
 @media only screen and (max-width: 1000px) {
     .title {
-        padding-left: 60px;
+        padding-left: 0;
+        margin-left: 20px;
     }
     
     #question-icon {
-        margin-right: 10px;
+        margin-right: 20px;
     }
     
-    #rules-panel {
+    #panel {
         width: 360px;
         height: 500px;
         top: 50%;
@@ -94,5 +101,9 @@
     #rules li {
         margin: 10px 0 20px 20px;
         font-size: 1.1em;
+    }
+
+    #settings-icon {
+        margin-right: 10px;
     }
 }
